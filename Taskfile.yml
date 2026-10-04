@@ -1,0 +1,8 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  # Tasks land here as the template work starts (see mvp-first-steps.md, M6).

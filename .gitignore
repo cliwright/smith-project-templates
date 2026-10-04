@@ -222,3 +222,4 @@ __marimo__/
 # Smith registry layout: python/lib/ is a real directory, not a build artifact.
 # The Python template's lib/ rule above would otherwise prune it from git.
 !python/lib/
+.idea
