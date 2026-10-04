@@ -3,9 +3,7 @@
   "pypi_package_name": "python-boilerplate",
   "project_slug": "{{ cookiecutter.pypi_package_name.replace('-', '_') }}",
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
-  "task_namespace": "libs:{{ cookiecutter.pypi_package_name }}",
   "__prompts__": {
-    "project_slug": "Used in src/<project_slug> (underscores, used for imports like 'import project_slug')",
-    "task_namespace": "Full Task namespace this project will be included under, e.g. libs:py:<name> or tools:py:<name>"
+    "project_slug": "Used in src/<project_slug> (underscores, used for imports like 'import project_slug')"
   }
 }

@@ -16,13 +16,13 @@ This template uses cookiecutter to generate a Python project with a basic struct
     ├── README.md
     ├── /src
     │   └── /{{cookiecutter.project_slug}}
-    │       ├──  __init__.py
-    │       ├──  __main__.py
+    │       ├── __init__.py
+    │       ├── __main__.py
     │       └── / cli
-    │           └──  __init__.py
+    │           └── __init__.py
     ├── Taskfile.yml
     └── /tests
-        ├──  __init__.py
-        ├──  conftest.py
-        └──  test_{{cookiecutter.project_slug}}.py
+        ├── __init__.py
+        ├── conftest.py
+        └── test_{{cookiecutter.project_slug}}.py
 ```
