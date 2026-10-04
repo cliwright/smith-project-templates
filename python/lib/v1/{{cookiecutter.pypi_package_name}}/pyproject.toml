@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling==1.31.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "{{cookiecutter.pypi_package_name}}"
+version = "0.1.0"
+description = "{{cookiecutter.project_short_description}}"
+readme = "README.md"
+requires-python = ">= 3.10"
+
+authors = [{name = "Your Organization", email = "{{cookiecutter.email}}"}]
+
+
+
+maintainers = [
+  {name = "Your Organization", email = "{{cookiecutter.email}}"}
+]
+
+dependencies = []
+
+
+[project.scripts]
+{{cookiecutter.pypi_package_name}} = "{{cookiecutter.project_slug}}.__main__:main"
+
+
+[tool.ruff]
+line-length = 160
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+]
+
+[tool.uv]
+package = true

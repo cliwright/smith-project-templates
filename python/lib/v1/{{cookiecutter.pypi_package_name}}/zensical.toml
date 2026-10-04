@@ -1,0 +1,7 @@
+[project]
+site_name = "{{ cookiecutter.pypi_package_name }} Documentation"
+
+nav = [
+  { "About" = "index.md" },
+  { "Help" = "help.md" },
+]

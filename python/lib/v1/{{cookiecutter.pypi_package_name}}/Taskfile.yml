@@ -1,0 +1,12 @@
+# Taskfile for {{ cookiecutter.pypi_package_name }}
+version: "3"
+includes:
+  project_tasks:
+    flatten: true
+    taskfile: ../../taskfiles/python/Taskfile.yml
+    vars:
+      PACKAGE_NAME: "{{ cookiecutter.pypi_package_name }}"
+      PROJECT_DIR: "{{ cookiecutter.project_slug }}"
+      HELP_FILE: "{{ cookiecutter.pypi_package_name }}-help.md"
+      NAMESPACE: "{{ cookiecutter.task_namespace }}"
+      NAMESPACE_DESC: "{{ cookiecutter.project_short_description }}"
