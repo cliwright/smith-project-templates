@@ -19,9 +19,23 @@ maintainers = [
 
 dependencies = []
 
+[project.optional-dependencies]
+dev = [
+    "datamodel-code-generator==0.83.0",
+    "ruff>=0.16.9",
+    "pytest>=9.1.1",
+    "ty>=0.0.85",
+    "pytest-cov>=7.0.0"
+]
+
+docs = [
+    "zensical>=0.0.68",
+    "mkdocstrings-python==2.0.9",
+]
 
 [project.scripts]
 {{cookiecutter.pypi_package_name}} = "{{cookiecutter.project_slug}}.__main__:main"
+
 
 
 [tool.ruff]
