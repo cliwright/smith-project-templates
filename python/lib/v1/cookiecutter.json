@@ -1,4 +1,5 @@
 {
+  "org": "cliwright",
   "email": "example@mail.com",
   "pypi_package_name": "python-boilerplate",
   "project_slug": "{{ cookiecutter.pypi_package_name.replace('-', '_') }}",
