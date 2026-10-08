@@ -5,7 +5,7 @@ version: 1
 # Required. The canonical dependency identifier — other projects declare
 # dependencies on this name, not on filesystem paths. Must be unique across
 # the repository; Smith fails discovery on duplicate names.
-name: your-project-name-here
+name: {{cookiecutter.project_slug}}
 
 # Required. Project type from the registry, pinned to a version.
 type: missing/absent
