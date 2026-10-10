@@ -1,0 +1,17 @@
+{
+  "org": "cliwright",
+  "image_name": "docker-boilerplate",
+  "image_slug": "{{ cookiecutter.image_name.replace('-', '_') }}",
+  "registry": "ghcr.io/cliwright",
+  "base_image_family": ["alpine", "debian"],
+  "base_image": "{% if cookiecutter.base_image_family == 'alpine' %}alpine:3.21{% else %}debian:bookworm-slim{% endif %}",
+  "build_tool": ["bake", "compose"],
+  "project_short_description": "A Docker image boilerplate with Smith build wiring.",
+  "__prompts__": {
+    "org": "GitHub org, used for the OCI image.source label",
+    "image_slug": "image_name with underscores; used for the compose service name",
+    "registry": "Registry the image is tagged for (no trailing slash)",
+    "base_image_family": "Base-image family; controls user/group creation commands in the Dockerfile",
+    "build_tool": "Parameters-file flavor: docker-bake.hcl (docker buildx bake) or compose.yaml (docker compose build)"
+  }
+}

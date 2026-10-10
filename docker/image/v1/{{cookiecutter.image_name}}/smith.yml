@@ -1,0 +1,22 @@
+# smith.yml — Smith project manifest. One per project directory; declares
+# what the project IS, never how it is built (that's the project type's job).
+version: 1
+
+# Required. The canonical dependency identifier — other projects declare
+# dependencies on this name, not on filesystem paths. Must be unique across
+# the repository; Smith fails discovery on duplicate names.
+name: {{cookiecutter.image_slug}}
+
+# Required. Project type from the registry, pinned to a version. Set the one
+# matching the build_tool chosen at scaffold time:
+#   docker/bake/image@v1     — builds via docker-bake.hcl (docker buildx bake)
+#   docker/compose/image@v1  — builds via compose.yaml (docker compose build)
+# The placeholder below is deliberately invalid to force this edit.
+type: missing/absent
+
+# Optional. Dependencies on other projects, by name. An image typically
+# depends on whatever builds the artifacts it packages:
+#   - project: my-lib
+#     targets: [build]
+#     before: [build]
+#depends_on: []

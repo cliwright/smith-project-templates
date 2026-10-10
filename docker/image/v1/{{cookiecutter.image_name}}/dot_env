@@ -1,0 +1,6 @@
+# Defaults for compose.yaml variable interpolation (docker compose reads this
+# file automatically). These are build parameters, not secrets.
+# Override from the shell per invocation: TAG=1.4.2 docker compose build
+REGISTRY={{cookiecutter.registry}}
+IMAGE={{cookiecutter.image_name}}
+TAG=dev

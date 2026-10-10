@@ -1,0 +1,19 @@
+# compose.yaml — build (and run) parameters for {{cookiecutter.image_name}}.
+#
+# Single-service file: the service IS the image. Smith's docker/compose/image
+# type builds with `docker compose build`, which reads this file; anything
+# under `build:` is picked up automatically. Extend with runtime config
+# (ports, environment, command) if this image grows into a long-running
+# service.
+#
+# Values interpolate from the process environment, with defaults from .env:
+#   TAG=1.4.2 docker compose build
+
+services:
+  {{cookiecutter.image_slug}}:
+    image: ${REGISTRY}/${IMAGE}:${TAG}
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        IMAGE_VERSION: ${TAG}
