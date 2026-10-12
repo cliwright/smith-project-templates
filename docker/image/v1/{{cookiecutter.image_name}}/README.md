@@ -4,7 +4,7 @@
 
 This directory is a Smith project. Bind it to a project type by editing
 `type:` in `smith.yml` (see the comments there), then Smith owns the build:
-`smith build {{cookiecutter.image_slug}}`.
+`smith images {{cookiecutter.image_name}} build`.
 
 ## Building by hand
 

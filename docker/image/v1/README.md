@@ -5,9 +5,9 @@ manifest. One template covers both build-tool flavors — the choice is made at
 scaffold time and baked into the project:
 
 - **bake** — parameters in `docker-bake.hcl`, built by `docker buildx bake`;
-  pairs with type `docker/bake/image@v1`
+  pairs with type `docker/bake/image@1`
 - **compose** — parameters in `compose.yaml` (defaults in `.env`), built by
-  `docker compose build`; pairs with type `docker/compose/image@v1`
+  `docker compose build`; pairs with type `docker/compose/image@1`
 
 The unselected flavor's files are removed by `hooks/post_gen_project.py`, so
 the project ships exactly one parameters file — the one its type drives.

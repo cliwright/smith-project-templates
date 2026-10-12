@@ -9,6 +9,12 @@
 //   TAG=1.4.2 docker buildx bake
 //   REGISTRY=localhost:5000/mine docker buildx bake --push
 
+// What a bare `docker buildx bake` (smith's build step) builds. Add further
+// targets to this list as the file grows.
+group "default" {
+  targets = ["image"]
+}
+
 variable "REGISTRY" {
   default = "{{cookiecutter.registry}}"
 }

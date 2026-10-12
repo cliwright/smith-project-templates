@@ -4,15 +4,26 @@ version: 1
 
 # Required. The canonical dependency identifier — other projects declare
 # dependencies on this name, not on filesystem paths. Must be unique across
-# the repository; Smith fails discovery on duplicate names.
-name: {{cookiecutter.image_slug}}
+# the repository; Smith fails discovery on duplicate names. The image name
+# (dashes) is used, NOT image_slug (underscores): project names must match
+# ^[a-z][a-z0-9-]*$.
+name: {{cookiecutter.image_name}}
 
 # Required. Project type from the registry, pinned to a version. Set the one
 # matching the build_tool chosen at scaffold time:
-#   docker/bake/image@v1     — builds via docker-bake.hcl (docker buildx bake)
-#   docker/compose/image@v1  — builds via compose.yaml (docker compose build)
+#   docker/bake/image@1     — builds via docker-bake.hcl (docker buildx bake)
+#   docker/compose/image@1  — builds via compose.yaml (docker compose build)
 # The placeholder below is deliberately invalid to force this edit.
 type: missing/absent
+
+# Values for the params the docker image types declare (see the type's
+# params): they set REGISTRY / IMAGE / TAG in the target steps' environment,
+# which docker-bake.hcl / compose.yaml interpolate into the image tag.
+# Defaults below came from the scaffold answers; override tag per project.
+params:
+  registry: {{cookiecutter.registry}}
+  image: {{cookiecutter.image_name}}
+  tag: dev
 
 # Optional. Dependencies on other projects, by name. An image typically
 # depends on whatever builds the artifacts it packages:
