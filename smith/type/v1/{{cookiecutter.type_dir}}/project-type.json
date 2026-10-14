@@ -1,0 +1,31 @@
+{
+  "name": "{{ cookiecutter.type_name }}",
+  "version": {{ cookiecutter.type_version }},
+  "description": "{{ cookiecutter.description }}",
+
+  "tools": ["echo"],
+
+  "working_dir": "project",
+
+  "params": {
+    "greeting": {
+      "default": "hello",
+      "description": "Sample param - referenced in steps and environment as {% raw %}{{.greeting}}{% endraw %}"
+    }
+  },
+
+  "environment": {
+    "SAMPLE_ENV": "{% raw %}{{.greeting}}{% endraw %} from the type environment"
+  },
+
+  "targets": {
+    "build": {
+      "description": "Sample build target - replace with real toolchain steps",
+      "steps": ["echo '{% raw %}{{.greeting}}{% endraw %} from build' && echo \"$SAMPLE_ENV\""]
+    },
+    "test": {
+      "description": "Sample test target - replace with the real test runner",
+      "steps": ["echo 'add real test steps'"]
+    }
+  }
+}

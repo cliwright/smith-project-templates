@@ -1,0 +1,18 @@
+{
+  "language": "python",
+  "flavor": "acme",
+  "kind": "lib",
+  "type_version": "1",
+  "description": "What this type builds, in one line.",
+  "type_name": "{{ cookiecutter.language }}/{{ cookiecutter.flavor }}/{{ cookiecutter.kind }}",
+  "type_dir": "{{ cookiecutter.type_name }}/v{{ cookiecutter.type_version }}",
+  "__prompts__": {
+    "language": "Type name segment 1 - language namespace (python, docker, go, repo, ...)",
+    "flavor": "Type name segment 2 - flavor ('std' when the language has a standard toolchain)",
+    "kind": "Type name segment 3 - kind (lib, tool, image, module, workspace, ...)",
+    "type_version": "Type version N - renders the v<N> directory and project-type.json \"version\"",
+    "description": "One line: what projects of this type are and what the type does",
+    "type_name": "Computed from the segments above - do not edit",
+    "type_dir": "Computed from the segments above - do not edit"
+  }
+}
