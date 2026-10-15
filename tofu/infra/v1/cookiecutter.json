@@ -1,0 +1,19 @@
+{
+  "project_name": "my-infrastructure",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "project_short_description": "OpenTofu infrastructure project for {{ cookiecutter.project_name }}",
+  "cloud_provider": ["aws", "gcp", "azure"],
+  "region": "{{ {'aws': 'eu-central-1', 'gcp': 'europe-west1', 'azure': 'westeurope'}[cookiecutter.cloud_provider] }}",
+  "provider_version": "{{ {'aws': '5.100.0', 'gcp': '6.0.0', 'azure': '4.0.0'}[cookiecutter.cloud_provider] }}",
+  "environments": ["dev,int,prd", "dev"],
+  "tofu_version": "1.13.1",
+  "author_name": "cliwright",
+  "author_email": "example@email.com",
+  "year": "2026",
+  "__prompts__": {
+    "cloud_provider": "Cloud provider; drives the provider block, state backend, and generated backend tfvars",
+    "region": "Primary region (AWS/GCP) or location (Azure) - default depends on the provider",
+    "provider_version": "HashiCorp provider version, constrained as ~> X.Y.Z",
+    "environments": "Comma-separated environments; one tfvars + backend-tfvars pair is generated per entry"
+  }
+}

@@ -1,0 +1,164 @@
+# OpenTofu / Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+.terraform.tfstate.lock.info
+
+# Include tfplan files to ignore the plan output
+*tfplan*
+
+# tenv version management
+.tenv-version
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local development
+.local/
+*.local
+
+### IDE - Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### IDE - JetBrains (IntelliJ, PyCharm, etc.)
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+.idea/**/aws.xml
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+.idea/**/gradle.xml
+.idea/**/libraries
+.idea/**/mongoSettings.xml
+.idea/sonarlint/
+.idea/httpRequests
+.idea/caches/build_file_checksums.ser
+
+# File-based project format
+*.iws
+*.iml
+*.ipr
+
+# IntelliJ out directory
+out/
+
+### OS Files
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+
+### Testing - Python (if using pytest)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.cover
+*.py,cover
+
+### Pre-commit
+.pre-commit-config.yaml.backup
+
+### Documentation
+docs/_build/
+site/
+
+### Logs
+*.log
+logs/
+*.log.*
+
+### Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+### Backup files
+*.bak
+*.backup
+
+### Security scanning reports
+checkov-report.json
+trivy-report.json
+tfsec-report.json
+terrascan-report.json
+
+### Module cache
+.modules/
+
+### Lock files from other tools
+package-lock.json
+yarn.lock
+Gemfile.lock

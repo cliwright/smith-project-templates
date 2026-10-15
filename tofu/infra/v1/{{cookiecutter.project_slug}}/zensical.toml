@@ -1,0 +1,7 @@
+[project]
+site_name = "{{ cookiecutter.project_name }} Documentation"
+
+nav = [
+  { "About" = "index.md" },
+  {"Deployment" = "deployment.md"}
+]
